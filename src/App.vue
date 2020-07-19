@@ -5,22 +5,12 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
-body {
-  background-color: blue;
-}
+<style scoped>
 * {
-  box-sizing: border-box;
-}
-#app {
-  max-width: 400px;
-  margin: 0 auto;
-  line-height: 1.4;
-  font-family: Montserrat, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-h1 {
-  text-align: center;
+  overflow: auto;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  background-color: #fbfbfb;
 }
 </style>

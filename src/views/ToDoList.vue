@@ -88,19 +88,14 @@
     </div>
     <footer class="footerWrapper">
       <div class="footer">
-        <div class="leftFooter">
-          <div class="aboutMe">
-            By
-          </div>
-          <p class="aboutMe">
-            Marcin Michna
-          </p>
-        </div>
-
+        <div></div>
         <div class="rightFooter">
-          <p>
-            git
-          </p>
+          <a target="_blank" href="https://github.com/marcinwmichna/shopping-list">
+            <img class="socialMedia" src="https://img.icons8.com/fluent/50/000000/github.png" />
+          </a>
+          <a target="_blank" href="https://www.linkedin.com/in/marcin-michna-685732185/">
+            <img class="socialMedia" src="https://img.icons8.com/color/48/000000/linkedin.png" />
+          </a>
         </div>
       </div>
     </footer>
@@ -109,8 +104,6 @@
 
 <script>
 import moment from 'moment';
-
-// import 'bootstrap/dist/css/bootstrap.min.css';
 
 const focus = {
   inserted(el) {
@@ -320,6 +313,50 @@ export default {
           },
           display: true,
         },
+        {
+          name: 'Cukierki',
+          dateCreated: moment().format('DD-MM, h:mm'),
+          dateModified: 'none',
+          amount: 40,
+          editing: {
+            name: false,
+            amount: false,
+          },
+          display: true,
+        },
+        {
+          name: 'Lody',
+          dateCreated: moment().format('DD-MM, h:mm'),
+          dateModified: 'none',
+          amount: 3,
+          editing: {
+            name: false,
+            amount: false,
+          },
+          display: true,
+        },
+        {
+          name: 'Krewetki',
+          dateCreated: moment().format('DD-MM, h:mm'),
+          dateModified: 'none',
+          amount: 1,
+          editing: {
+            name: false,
+            amount: false,
+          },
+          display: true,
+        },
+        {
+          name: 'Kwiaty',
+          dateCreated: moment().format('DD-MM, h:mm'),
+          dateModified: 'none',
+          amount: 2,
+          editing: {
+            name: false,
+            amount: false,
+          },
+          display: true,
+        },
       ],
     };
   },
@@ -382,7 +419,7 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 :root {
-  --page-width: 900px;
+  --page-width: 750px;
   --font-size: 18px;
 }
 
@@ -406,58 +443,9 @@ body {
   color: rgba(0, 0, 0, 0.6);
   font-size: 26px;
   padding: 16px 0 16px 0;
-  /*padding-left: 40px;*/
-  /*font-size: calc(var(--font-size) + 6px);*/
   max-width: var(--page-width);
-  /*width: 100%;*/
   height: 32px;
-  /*text-align: center;*/
   margin: auto;
-}
-/*button {*/
-/*  border-radius: 40px;*/
-/*  border: none;*/
-/*  color: #757575;*/
-/*  padding: 5px 10px;*/
-/*  text-align: center;*/
-/*  text-decoration: none;*/
-/*  display: inline-block;*/
-/*  font-size: 12px;*/
-/*  margin: 2px;*/
-/*}*/
-.deteleBtn {
-  /*padding: 16px;*/
-  /*background-color: lightgray;*/
-  /*transition: all 0.2s ease-in-out;*/
-}
-.deteleBtn:hover {
-  /*transform: scale(1.01, 1.01);*/
-  /*background-color: #f5f5f5;*/
-  /*border-radius: 20px;*/
-  /*cursor: pointer;*/
-  /*fill: red;*/
-}
-
-.IncrementBtn {
-  background-color: #b5ead7;
-}
-.IncrementBtn:hover {
-  background-color: #bcddd4;
-  /*cursor: pointer;*/
-}
-.IncrementBtn:focus {
-  outline-color: #bcddd4;
-}
-/*box-shadow: red;*/
-.DecrementBtn {
-  background-color: #ffb3ba;
-}
-.DecrementBtn:hover {
-  background-color: #ff9aa2;
-  /*cursor: pointer;*/
-}
-.DecrementBtn:focus {
-  outline-color: #ff9aa2;
 }
 svg {
   width: 28px;
@@ -470,10 +458,6 @@ svg:hover {
   background-color: #f5f5f5;
   border-radius: 20px;
 }
-.amountCounterButtons {
-  margin-right: 2px;
-  transition: all 0.2s ease-in-out;
-}
 
 .editInput {
   outline: none;
@@ -483,16 +467,12 @@ svg:hover {
 }
 .mainInput {
   font-size: var(--font-size);
-  /*margin-top: 78px;*/
-  /*margin-bottom: 10px;*/
   margin: 78px 0 10px 0;
   width: calc(100% - 40px);
   border: 2px solid #e8e9ea;
   border-radius: 30px;
   max-width: var(--page-width);
   padding: 20px;
-  /*border: none;*/
-  /*box-shadow: 1px 1px 1px 1px #efefef;*/
   transition: all 0.3s ease-in-out;
 }
 .mainInput:hover {
@@ -500,20 +480,12 @@ svg:hover {
 }
 .mainInput:focus {
   outline: none;
-  /*-moz-outline-radius: 30px;*/
-  /*outline: dodgerblue;*/
-  /*outline-color: dodgerblue;*/
-  /*-moz-outline-radius: 80px;*/
-  /*outline: #4d90fe;*/
-  /*border: 2px solid #4d90fe;*/
-  /*-webkit-box-shadow: 0px 0px 5px #4d90fe;*/
-  /*box-shadow: 0px 0px 5px #4d90fe;*/
 }
 .home {
-  height: 100vh;
   width: var(--page-width);
   margin: auto;
 }
+
 .amountCounter {
   font-size: calc(var(--font-size));
 }
@@ -525,7 +497,6 @@ svg:hover {
   align-items: center;
 }
 .inline {
-  /*display: inline-block;*/
   padding: 6px;
 }
 .mainText {
@@ -547,19 +518,19 @@ svg:hover {
   align-items: center;
 }
 .listWrap {
+  display: grid;
+  grid-template-rows: auto;
   margin-bottom: 80px;
+  transition: all 0.3s ease-in-out;
 }
 .item {
   display: flex;
   justify-content: space-between;
   background-color: white;
-  /*border-radius: 8px;*/
   margin-top: 8px;
   padding: 5px;
   border-radius: 30px;
   border: 2px solid #e8e9ea;
-  /*box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);*/
-  transition: all 0.3s ease-in-out;
 }
 
 .item:hover {
@@ -571,10 +542,9 @@ svg:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /*margin: auto;*/
   margin: auto;
-
-  width: 100%;
+  height: inherit;
+  width: var(--page-width);
 }
 footer {
   bottom: 0;
@@ -590,13 +560,40 @@ footer {
 
 .leftFooter,
 .rightFooter {
-  top: 50%;
+  height: inherit;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
-.aboutMe {
-  margin-left: 10px;
-  /*padding: 10px;*/
+.socialMedia {
+  width: 30px;
+  height: 30px;
+}
+@media (max-width: 900px) {
+  :root {
+    --page-width: 400px;
+    min-width: 300px;
+  }
+
+  .timeStamp {
+    display: inline;
+    margin-left: 10px;
+  }
+  .leftWrap,
+  .rightWrap {
+    /*margin-left: 10px;*/
+    padding: 5px;
+    justify-content: flex-start;
+  }
+  .rightWrap {
+    border-top: 2px solid #e8e9ea;
+    left: 0;
+  }
+  .amountCounter {
+    margin-left: 5px;
+  }
+  .item {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
 }
 </style>

@@ -421,6 +421,7 @@ export default {
 :root {
   --page-width: 750px;
   --font-size: 18px;
+  overflow-y: scroll;
 }
 
 * {
@@ -447,7 +448,9 @@ body {
   height: 32px;
   margin: auto;
 }
+
 svg {
+
   width: 28px;
   padding: 3px;
   cursor: pointer;
@@ -458,7 +461,12 @@ svg:hover {
   background-color: #f5f5f5;
   border-radius: 20px;
 }
-
+svg:hover > path{
+  fill: #2f89fc
+}
+.header:hover > span{
+   color:  #2f89fc
+}
 .editInput {
   outline: none;
   width: fit-content;
